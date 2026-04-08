@@ -2,7 +2,7 @@ package LLD.TicTacToe.manager;
 
 import LLD.TicTacToe.Model.PieceType;
 import LLD.TicTacToe.Model.PlayingPiece;
-import LLD.TicTacToe.utils.Pair;
+import commons.utils.Pair;
 
 import java.util.ArrayList;
 import java.util.List;

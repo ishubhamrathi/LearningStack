@@ -1,4 +1,4 @@
-package LLD.TicTacToe.utils;
+package commons.utils;
 
 public class Pair<U, V> {
     public final U first;

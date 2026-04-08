@@ -4,7 +4,7 @@ import LLD.TicTacToe.Model.GameStatus;
 import LLD.TicTacToe.Model.Player;
 import LLD.TicTacToe.Model.PlayingPieceO;
 import LLD.TicTacToe.Model.PlayingPieceX;
-import LLD.TicTacToe.utils.Pair;
+import commons.utils.Pair;
 
 import java.util.Deque;
 import java.util.LinkedList;
