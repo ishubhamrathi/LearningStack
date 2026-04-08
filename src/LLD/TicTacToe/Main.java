@@ -1,7 +1,10 @@
+package LLD.TicTacToe;
+
 import LLD.TicTacToe.Model.GameStatus;
 import LLD.TicTacToe.manager.TicTacToeGame;
 
-void main() {
+public class Main {
+    public static void main(String[] args) {
     IO.println(String.format("Hello and welcome to TicTacTow Game!"));
     TicTacToeGame game = new TicTacToeGame();
 
@@ -11,6 +14,5 @@ void main() {
         case DRAW -> IO.println("It's a DRAW!");
     }
     IO.println("====GAME OVER===");
-
-
+    }
 }
