@@ -8,18 +8,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Booking {
-    Show show;
-    List<Seat> bookedSeats = new ArrayList<>();
-    Payment payment;
+    private static int idCounter = 1;
 
-    public Show getShow() { return show; }
+    private final int id;
+    private Show show;
+    private final List<Seat> bookedSeats = new ArrayList<>();
+    private Payment payment;
+    private double totalAmount;
 
-    public void setShow(Show show) { this.show = show; }
+    public Booking() {
+        this.id = idCounter++;
+    }
 
-    public List<Seat> getBookedSeats() { return bookedSeats; }
+    public int getId() {
+        return id;
+    }
 
-    public Payment getPayment() { return payment; }
+    public Show getShow() {
+        return show;
+    }
 
-    public void setPayment(Payment payment) { this.payment = payment; }
+    public void setShow(Show show) {
+        this.show = show;
+    }
 
+    public List<Seat> getBookedSeats() {
+        return bookedSeats;
+    }
+
+    public void addBookedSeat(Seat seat) {
+        bookedSeats.add(seat);
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
+    public double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
 }

@@ -4,24 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Theatre {
-    public static int idCounter = 1;
+    private static int idCounter = 1;
 
-    int id;
-    List<Show> shows;
-    List<Screen> screens;
-    City city;
+    private final int id;
+    private final List<Show> shows;
+    private final List<Screen> screens;
+    private final City city;
 
     public Theatre(List<Screen> screens, City city) {
         this.id = idCounter++;
         this.screens = screens;
         this.city = city;
+        this.shows = new ArrayList<>();
     }
 
-    public void setShows(List<Show> shows) {
-        this.shows.addAll(shows);
+    public int getId() {
+        return id;
+    }
+
+    public List<Show> getShows() {
+        return shows;
     }
 
     public List<Screen> getScreens() {
-        return this.screens;
+        return screens;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setShows(List<Show> shows) {
+        this.shows.clear();
+        this.shows.addAll(shows);
     }
 }

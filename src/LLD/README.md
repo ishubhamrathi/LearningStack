@@ -4,6 +4,8 @@ This folder contains low-level design practice projects implemented in Java.
 
 ## Project List
 
+- [BookMyShow](./BookMyShow/README.md) - Minimal movie ticket booking design with theatres, shows, seats, bookings, and payment flow.
+  Run Main: `LLD.BookMyShow.Main`
 - [Logger](./Logger/README.md) - Simple chain-of-responsibility logger with multiple log levels.
   Run Main: `LLD.Logger.Main`
 - [ParkingLot](./ParkingLot/README.md) - Basic parking lot design with spots, vehicles, tickets, and manager flow.

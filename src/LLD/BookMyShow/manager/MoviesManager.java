@@ -10,30 +10,39 @@ import java.util.List;
 import java.util.Map;
 
 public class MoviesManager {
-    Map<City, List<Movie>> cityVsMovies;
-    List<Movie> movies;
+    private final Map<City, List<Movie>> cityVsMovies;
+    private final List<Movie> movies;
 
-    public MoviesManager () {
-        movies = new ArrayList<>();
-        cityVsMovies = new HashMap<>();
-        IO.println("Movies List initialized with empty!");
+    public MoviesManager() {
+        this.movies = new ArrayList<>();
+        this.cityVsMovies = new HashMap<>();
+        System.out.println("Movies list initialized");
     }
 
     public void addMovie(Movie movie, City city) {
-        movies.add(movie);
+        if (!movies.contains(movie)) {
+            movies.add(movie);
+        }
+
         List<Movie> moviesList = cityVsMovies.getOrDefault(city, new ArrayList<>());
-        moviesList.add(movie);
+        if (!moviesList.contains(movie)) {
+            moviesList.add(movie);
+        }
         cityVsMovies.put(city, moviesList);
-        IO.println("Movie: " + movie.getName() + " is added to the list with city " + city.name());
+
+        System.out.println("Movie " + movie.getName() + " is added for city " + city.name());
     }
 
     public Movie getMovieByName(MovieName movieName) {
-        for (Movie movie: movies) {
-            IO.println("Movie found with name" + movieName);
-            if (movie.getName() == movieName) return movie;
+        for (Movie movie : movies) {
+            if (movie.getName() == movieName) {
+                return movie;
+            }
         }
-
-        IO.println("No Movie found with name "  + movieName);
         return null;
+    }
+
+    public List<Movie> getMoviesByCity(City city) {
+        return cityVsMovies.getOrDefault(city, new ArrayList<>());
     }
 }
