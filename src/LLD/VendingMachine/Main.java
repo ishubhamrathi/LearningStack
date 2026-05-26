@@ -13,7 +13,7 @@ public class Main {
     }
 
     private void fillUpInventory(VendingMachine machine) {
-        ItemShelf[] slots = machine.getInventory()
+//        ItemShelf[] slots = machine.getInventory();
     }
 
 }

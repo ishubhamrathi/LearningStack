@@ -11,9 +11,9 @@ public class Inventory {
     public Inventory(int itemCount) {
         this.itemCount = itemCount;
         for (int i = 0; i<=itemCount; i++) {
-            Item item = new Item();
-            ItemShelf itemShelf = new ItemShelf();
-            inventory.add(itemShelf);
+//            Item item = new Item();
+//            ItemShelf itemShelf = new ItemShelf();
+//            inventory.add(itemShelf);
         }
     }
 
